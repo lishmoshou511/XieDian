@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xiedian.app" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Black.NoTitleBar" >
+        <activity
+            android:name="com.xiedian.app.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.xiedian.app.ChartActivity"
+            android:label="@string/title_activity_chart" >
+        </activity>
+        <activity
+            android:name="com.xiedian.app.RemindActivity"
+            android:label="@string/title_activity_remind" >
+        </activity>
+        <activity
+            android:name="com.xiedian.app.MapActivity"
+            android:label="@string/title_activity_map" >
+        </activity>
+        <activity
+            android:name="com.xiedian.app.PointActivity"
+            android:label="@string/title_activity_point" >
+        </activity>
+        <activity
+            android:name="com.xiedian.app.TrackActivity"
+            android:label="@string/title_activity_track" >
+        </activity>
+        <activity
+            android:name="com.xiedian.app.BeijingActivity"
+            android:label="@string/title_activity_beijing" >
+        </activity>
+        <activity
+            android:name="com.xiedian.app.ShanghaiActivity"
+            android:label="@string/title_activity_shanghai" >
+        </activity>
+    </application>
+
+</manifest>
