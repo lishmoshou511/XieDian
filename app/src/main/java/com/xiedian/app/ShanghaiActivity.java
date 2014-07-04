@@ -1,10 +1,12 @@
 package com.xiedian.app;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 
 
 public class ShanghaiActivity extends Activity {
@@ -33,5 +35,27 @@ public class ShanghaiActivity extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private long timeStamp=0;
+    //点击屏幕事件
+    @Override
+    public boolean onTouchEvent(android.view.MotionEvent event){
+
+        if(event.getAction()==MotionEvent.ACTION_DOWN){
+            timeStamp=System.currentTimeMillis();
+        }
+
+        if(event.getAction()== MotionEvent.ACTION_UP){
+
+            long currentTime=System.currentTimeMillis();
+            if(currentTime-timeStamp > 1000){
+                //视为点击
+
+                Intent intent=new Intent(this,ScanActivity.class);
+                startActivity(intent);
+            }
+        }
+        return super.onTouchEvent(event);
     }
 }

@@ -2,13 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.xiedian.app" >
 
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@android:style/Theme.Black.NoTitleBar" >
         <activity
-            android:name="com.xiedian.app.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,33 +20,39 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.xiedian.app.ChartActivity"
+            android:name=".ChartActivity"
             android:label="@string/title_activity_chart" >
         </activity>
         <activity
-            android:name="com.xiedian.app.RemindActivity"
+            android:name=".RemindActivity"
             android:label="@string/title_activity_remind" >
         </activity>
         <activity
-            android:name="com.xiedian.app.MapActivity"
+            android:name=".MapActivity"
             android:label="@string/title_activity_map" >
         </activity>
         <activity
-            android:name="com.xiedian.app.PointActivity"
+            android:name=".PointActivity"
             android:label="@string/title_activity_point" >
         </activity>
         <activity
-            android:name="com.xiedian.app.TrackActivity"
+            android:name=".TrackActivity"
             android:label="@string/title_activity_track" >
         </activity>
         <activity
-            android:name="com.xiedian.app.BeijingActivity"
+            android:name=".BeijingActivity"
             android:label="@string/title_activity_beijing" >
         </activity>
         <activity
-            android:name="com.xiedian.app.ShanghaiActivity"
+            android:name=".ShanghaiActivity"
             android:label="@string/title_activity_shanghai" >
         </activity>
+        <activity
+            android:name=".ScanActivity"
+            android:label="@string/title_activity_scan" >
+        </activity>
+
+        <service android:name="com.xiedian.service.BluetoothLeService" android:enabled="true"/>
     </application>
 
 </manifest>
